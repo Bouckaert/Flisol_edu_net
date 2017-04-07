@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
     @ranking = []
     contacts.each do |contact|
-      name = contact['first_name'] + ' ' + contact['last_name']
+      name = contact['first_name'].downcase.camelize + ' ' + contact['last_name'].downcase.camelize
 
       link_contacts = contact['links'][4]['href']
 

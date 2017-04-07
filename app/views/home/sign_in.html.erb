@@ -1,4 +1,5 @@
-<h2>Log in</h2>
-
-<%= link_to "Sign in with Openredu", user_openredu_omniauth_authorize_path %>
-
+<div class="jumbotron">
+  <h1>Olá!</h1>
+  <p>Para fazer login você tem que usar sua conta do <a href="http://www.openredu.com">openredu.com</a></p>
+  <p><%= link_to "Logue com sua conta do Openredu", user_openredu_omniauth_authorize_path, class: "btn btn-primary btn-lg" %></p>
+</div>

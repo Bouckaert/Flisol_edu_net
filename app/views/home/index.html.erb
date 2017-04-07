@@ -1,15 +1,20 @@
-<h1>Ranking</h1>
-<ol> 
-  <% @ranking.each do |people| %>
-    <li>
-      <p>
-        <b>Nome:</b> <%= people[:name] %>
-      </p>
-      <p>
-        <b>Quantidade de amigos:</b> <%= people[:friend_count] %>
-      </p>
-    </li>
-  <%end%>
-</ol>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        Ranking
+      </div>
 
-<%= link_to 'Sair', destroy_user_session_path%>
+      <div class="panel-body">
+        <ul class="list-group">
+          <% @ranking.each do |people| %>
+            <li class="list-group-item">
+              <span class="badge alert-info"><%= people[:friend_count] %></span>
+              <%= people[:name] %>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
