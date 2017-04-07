@@ -38,6 +38,8 @@ gem 'omniauth-openredu', git: 'https://github.com/rafaellsma/omniauth-openredu'
 
 gem 'omniauth-oauth2', '~> 1.3.1'
 
+gem 'httparty'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

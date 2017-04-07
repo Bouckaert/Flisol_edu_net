@@ -1,0 +1,15 @@
+<h1>Ranking</h1>
+<ol> 
+  <% @ranking.each do |people| %>
+    <li>
+      <p>
+        <b>Nome:</b> <%= people[:name] %>
+      </p>
+      <p>
+        <b>Quantidade de amigos:</b> <%= people[:friend_count] %>
+      </p>
+    </li>
+  <%end%>
+</ol>
+
+<%= link_to 'Sair', destroy_user_session_path%>
