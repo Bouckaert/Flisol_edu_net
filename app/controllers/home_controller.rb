@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     contacts = HTTParty.get(
       OPENREDU_URL+"/api/users/#{current_user.login}/contacts",
       headers: header
-    ).parsed_response
+    )
 
     @ranking = []
     contacts.each do |contact|
@@ -19,7 +19,7 @@ class HomeController < ApplicationController
         link_contacts,
         headers: header,
         query: { 'status': 'accepted'}
-      ).parsed_response
+      )
 
       friend_count = connections_friend.count
       @ranking << {name: name, friend_count: friend_count}
